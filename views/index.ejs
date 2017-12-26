@@ -1,0 +1,41 @@
+<% include partials/header %>
+
+<div class="cover">
+    <div class="profile-image">
+
+    </div>
+
+</div>
+
+
+<div class="jumbotron" class="post-box" style="width: 50%; padding: 20px; margin: 0 auto">
+    <form action="/">
+        <div>
+            <input type="text" class="form-control" required oninvalid="this.setCustomValidity('Fill Out this Field')" name="Userstatus" placeholder="Status...">
+
+                <i class="fa fa-camera fa-1x" style="margin-top: 20px; margin-left: 7px; transform: scale(1.2)" aria-hidden="true"></i>
+                <i class="fa fa-map-marker fa-1x" style="margin-top: 20px; margin-left: 30px; transform: scale(1.3)" aria-hidden="true"></i>
+
+            <button class="button" style="float: right; margin-top: 15px"><b>POST</b></button>
+        </div>
+    </form>
+</div>
+
+<% posts.forEach(function(post) { %>
+    <div class="jumbotron" style="width: 50%; padding: 20px; margin: 0 auto">
+        <div>
+            <div style="background: url('/img/profile.jpg')center center; background-size: cover; height: 50px; width: 50px;" class="col-md-3"></div>
+            <h2 class="col-md-10" style="position: relative; top: -23px;">Meen Khan<p style="font-size: 15px;">Fri 12:00 PM</p></h2>
+            <p style="margin: 0; position: relative; top: -20px;"><%= post.status %></p>
+        </div>
+        <img style="margin: 0; position: relative; top: -15px;" src="<%= post.image %>" alt="">
+        <div>
+            <i class="fa fa-thumbs-up like-btn fa-2x" aria-hidden="true"><span class="badge like-count">23</span></i>
+            <i class="fa fa-thumbs-down unlike-btn fa-2x" style="margin-left: 20px;" aria-hidden="true"><span class="badge">23</span></i>
+        </div>
+    </div>
+<% }) %>
+
+
+
+<% include partials/footer %>
