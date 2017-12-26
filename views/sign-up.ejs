@@ -1,4 +1,28 @@
-<% include partials/header %>
+<html>
+<head>
+    <title>Auth</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar-default navbar-list fixed-top green">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/%>">.MEEN</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 5%;">
+            <% if (!currentUser) { %>
+                <li><a href="/sign-in" style="color: #ffffff">Sign In</a></li>
+                <li><a href="/sign-up" style="color: #ffffff">Sign Up</a></li>
+            <% } else { %>
+                <li><a href="/<%= currentUser._id %>" style="color: #ffffff">Hi, <%= currentUser.name %></a></li>
+                <li><a href="/log-out" style="color: #ffffff">Log Out</a></li>
+            <% } %>
+        </ul>
+    </div>
+</nav>
+
 <div class="login-background">
     <div class="jumbotron" style="width: 40%; padding:20px; padding-bottom: 0; margin: 0 auto; margin-top: 20%;">
         <form action="/sign-up" method="POST">
@@ -21,4 +45,7 @@
         </form>
     </div>
 </div>
-<% include partials/footer %>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
