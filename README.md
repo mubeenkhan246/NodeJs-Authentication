@@ -1,15 +1,13 @@
-# PassportJs-Authentication
-Simple passport js Authentication 
-##### User Signin
-##### User Sign Up
-##### User Logout
+We will be using PassportJs to authenticate users locally.
 
-### Requirements:
-#### MongoDB
-Download the latest production release of MongoDB from the MongoDB downloads page. Ensure you download the correct version of MongoDB for your Windows system. The 64-bit versions of MongoDB do not work with 32-bit Windows.
-https://www.mongodb.com/
+## Instructions
+If you would like to download the code and try it for yourself....
 
-#### NodeJs
-If you're using OS X or Windows, the best way to install Node.js is to use one of the installers from the Node.js download.
-https://nodejs.org/en/download/
+1. Clone the repository: `git clone git@github.com:mubeenkhan246/NodeJs-Authentication.git`
+2. Install packages: `npm install`
+3. Change out the database configuration in `app.js on line number 12`
+4. Run Server: `node app.js`
+5. Visit in your browser at: `http://localhost:4000`
 
+## Note:
+This App has been upgraded to use express.js 4.14.1
